@@ -1,0 +1,12 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.pyright]
+include = ["backend", "tests", "scripts"]
+pythonVersion = "3.12"
+typeCheckingMode = "basic"
+executionEnvironments = [
+  { root = ".", extraPaths = ["."] }
+]
